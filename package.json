@@ -1,0 +1,16 @@
+{
+  "name": "newyear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kartik Patel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "underscore-template-loader": "^0.8.0"
+  }
+}
