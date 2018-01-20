@@ -309,6 +309,66 @@ input {
         background-color: rgba(222, 13, 77, 0.86);
     }
 
+    .enter-name input[type=name] {
+	background-color:#a460f4;
+	color: #fff;
+   	border-radius: 10px;
+    	box-sizing: border-box;
+    	border: none;
+    	padding: 5px;
+    	position: fixed;
+    	left: 10px;
+    	bottom: 0px;
+    	height: 50px;
+    	width: 70%;
+    	text-align: center;
+    	font-size: 22px;
+    	display: inline-block;
+}
+
+.enter-name .btnn {
+	border-radius: 10px;
+    	font-size: 21px;
+    	padding: 4px;
+    	position: fixed;
+    	right: 2px;
+    	bottom: 3px;
+    	height: 50px;
+    	width: 23%;
+    	display: inline-block;
+    	color: #fff;
+    	background-color:a460f4;
+    	border: none;
+    	letter-spacing: .5px;
+    	transition: .2s ease-out;
+    	cursor: pointer;
+    	line-height: 36px;
+    	outline: 0;
+    	text-transform: uppercase;
+    	vertical-align: middle;
+    	text-decoration: none;
+    	animation-duration: 4s !important;
+}
+
+.enter-name input[type=name]::-webkit-input-placeholder { 
+	color: #fff;
+  	font-size: 18px;	
+}
+
+.enter-name input[type=name]::-moz-placeholder { 
+	color: #fff;
+  	font-size: 18px;
+}
+
+.enter-name input[type=name]:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.enter-name input[type=name]:focus::-moz-placeholder { 
+	color: #fff;
+  	font-size: 18px;
+}
+
     .main-form .form .bg-group label {
         display: inline-block;
         width: 50px;
@@ -645,7 +705,27 @@ var x = setInterval(function() {
        </div>
         </div>
  
-    <a class="footerbtn" href="whatsapp://send?text=wishing you very very happy new year %0Aenter your name and see the magic 👇 %0Ahttp://mera-style.com"><b style="font-size: 15px;"> Click Here to Share on Whatsapp</b> </a> 
+        <div class="enter-name">
+            <input class="animated pulse infinite" type="name" required="" id="nameTXT" maxlength="50" name="n" placeholder="👉 Enter Your Name Here">
+            <button class="btnn animated shake infinite" id="goBtn" type="submit"><span>👉</span> Go</button>
+        </div>
 
+<script type="text/javascript">
+
+var nameTV = document.getElementById("nameTXT")
+console.log("Yup");
+
+
+document.getElementById("goBtn").onclick = function(){
+
+    var name = nameTV.value;
+    var url =  "whatsapp://send?text=wishing you very very happy Republic Day %0Aenter your name and see the magic 👇 %0Awishing.deucate.co/name/"+name ;
+    console.log(url);
+
+    var req = new XMLHttpRequest();  
+    req.open('GET', url, false);   
+    req.send(null);  
+}
+</script>
 </body>
 </html>
