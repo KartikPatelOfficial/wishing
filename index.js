@@ -6,9 +6,14 @@ app.set('view engine', 'ejs')
 
 
 
-app.get('/name/:name', function (req, res) {
+app.get('/republic/:name', function (req, res) {
     var name = req.params.name
-    res.render('main', { name: name })
+    res.render('republic', { name: name })
+})
+
+app.get('/', function (req, res) {
+    res.render('start')
+
 })
 
 app.listen(8080, function () {
