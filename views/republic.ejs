@@ -4,9 +4,9 @@
 <title> wishing you happy New Year.</title>
 
 <style>
-    i {
-        color: darkblue;
-    }
+i {
+    color: darkblue;
+}
 input[type=name], select {
     width: 100%;
     padding: 12px 20px;
@@ -728,12 +728,10 @@ console.log("Yup");
 document.getElementById("goBtn").onclick = function(){
 
     var name = nameTV.value;
-    var url =  "whatsapp://send?text=wishing you very very happy Republic Day %0Aenter your name and see the magic 👇 %0Awishing.deucate.co/name/"+name ;
+    var url =  "whatsapp://send?text=wishing you very very happy Republic Day %0Aenter your name and see the magic 👇 %0Awishing.deucate.co/0/"+name ;
     console.log(url);
 
-    var req = new XMLHttpRequest();  
-    req.open('GET', url, false);   
-    req.send(null);  
+    window.open(url)
 }
 </script>
 </body>
