@@ -11,6 +11,7 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "firebase": "^4.9.1",
     "underscore-template-loader": "^0.8.0"
   }
 }
