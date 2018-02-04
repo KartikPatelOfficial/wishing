@@ -17,9 +17,9 @@ app.get('/:type/:name', function (req, res) {
     res.render('republic', { name: name ,type: newType.type ,quote : newType.quote })
 })
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res) { 
+    res.status(200)   
     res.render('start')
-
 })
 
 app.listen(8080, function () {
@@ -35,20 +35,32 @@ function checkType(tp){
         }break;
 
         case "1":{
-            ob.quote = "saf"
+            ob.quote = "On this pious occasion of Mahashivaratri, many many greetings to all of you. May Lord Shiva shower on you his blessings with happiness, prosperity & peace."
             ob.type = "Mahasivratri"
             returnable = ob;
         }break;
 
         case "2":{
-            ob.quote = "saf"
-            ob.type = "Mahasivratri"
+            ob.quote = "Love is in playing Holi together; that warmth and feel is adrenaline on steroids."
+            ob.type = "Holi"
             returnable = ob;        
         }break;
 
         case "3":{
-            ob.quote = "saf"
-            ob.type = "Mahasivratri"
+            ob.quote = "Dear brother, even though I am far away from you, but you will always be there in my heart. Happy Raksha Bandhan."
+            ob.type = "Raksha Bandhan"
+            returnable = ob;        
+        }break;
+
+        case "4":{
+            ob.quote = "Diwali is a magical time to celebrate with loved ones. May you get to create special memories with the ones you love, this Diwali. Best wishes!"
+            ob.type = "Diwali"
+            returnable = ob;        
+        }break;
+
+        case "5":{
+            ob.quote = "Thanks for all the fun, and lovely moments we shared.May we have lots more in the glorious New Year."
+            ob.type = "New Year"
             returnable = ob;        
         }break;
 
