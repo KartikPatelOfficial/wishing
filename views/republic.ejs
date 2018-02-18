@@ -666,7 +666,7 @@ input {
 </center>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 26, 2019 00:00:00").getTime();
+var countDownDate = new Date("<%= timetill %>").getTime();
 
 // Update the count down every 01 second
 var x = setInterval(function() {
@@ -694,6 +694,30 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>   
+
+<!--Advertisement by facebook-->
+<script type="text/javascript">
+    sa_client = "65638b027eae978f0776f37faea9a66e";
+    sa_code = "f18b4979619ea0119536f298d7bbae99";
+    sa_protocol = ("https:"==document.location.protocol)?"https":"http";
+    sa_pline = "3";
+    sa_maxads = "4";
+    sa_bgcolor = "FFFFFF";
+    sa_bordercolor = "BDD631";
+    sa_superbordercolor = "BDD631";
+    sa_linkcolor = "001EB5";
+    sa_desccolor = "000000";
+    sa_urlcolor = "788300";
+    sa_b = "0";
+    sa_format = "rect_300x250";
+    sa_width = "300";
+    sa_height = "250";
+    sa_location = "0";
+    sa_radius = "4";
+    sa_borderwidth = "2";
+    sa_font = "1";
+    </script>
+    <script type="text/javascript" src="//sa.entireweb.com/sense2.js"></script>
 
 <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -727,10 +751,30 @@ console.log("Yup");
 document.getElementById("goBtn").onclick = function(){
 
     var name = nameTV.value;
-    var url =  "whatsapp://send?text=wishing you very very happy Republic Day %0Aenter your name and see the magic 👇 %0Awishing.deucate.co/0/"+name ;
+    var url = window.location+""
+    var charURL = url.split('')
+    var i = 0
+    var last = []
+    var n = url.length
+    var temp =0
+
+    for(i=0;i<n-1;i++){
+        if(charURL[i]=="/"){
+            last[temp] = i
+            temp++
+        }else{
+        }
+        
+    }
+    var c = last.slice(-1)[0]
+    for(i=n;i>c+1;i--){
+        charURL.pop()[i]
+    }
+    url = charURL.join("")+name
+    url =  "whatsapp://send?text=I have surprise for you.😘  %0Aenter your name and see the magic 👇 %0A"+url ;
     console.log(url);
 
-    window.open("https://google.com")
+    window.open(url)
 }
 </script>
 </body>
